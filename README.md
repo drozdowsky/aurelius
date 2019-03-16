@@ -1,13 +1,11 @@
-# kjv
+# Aurelius
 
-Read the Word of God from your terminal
-
-Forked from [https://github.com/bontibon/kjv.git](https://github.com/bontibon/kjv.git) but with the Apocrypha added.
+Read the Word of *Marcus Aurelius* from **Meditations** in your terminal.
 
 
 ## Usage
 
-    usage: ./kjv [flags] [reference...]
+    usage: ./aurelius [flags] [reference...]
 
       -l      list books
       -W      no line wrap
@@ -36,10 +34,9 @@ Forked from [https://github.com/bontibon/kjv.git](https://github.com/bontibon/kj
 
 ## Build
 
-kjv can be built by cloning the repository and then running make:
+aurelius can be built by cloning the repository and then running make:
 
-    git clone https://github.com/lukesmithxyz/kjv.git
-    cd kjv
+    cd aurelius
     sudo make install
 
 ## License
