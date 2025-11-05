@@ -35,9 +35,25 @@ Read the Word of *Marcus Aurelius* from **Meditations** in your terminal.
 ## Build
 
 aurelius can be built by cloning the repository and then running make:
-
+```sh
     cd aurelius
     sudo make install
+```
+
+## Simple command to have random Marcus Eurelius quote in your terminal
+```sh
+#!/bin/sh
+# git clone https://github.com/drozdowsky/aurelius
+# Read the Word of Marcus Aurelius from Meditations in your terminal.
+#
+FILE=~/Builds/aurelius/aurelius.tsv
+if [ ! -f $FILE ]; then
+    mkdir -p ~/Builds && cd ~/Builds && \
+    git clone https://github.com/drozdowsky/aurelius
+fi
+
+sort --random-sort "$FILE" | head -n 1 | awk 'BEGIN {FS="\t"}; {print $6}' | fold -w 80 -s
+```
 
 ## License
 
